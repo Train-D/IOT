@@ -54,9 +54,9 @@ void loop () {
 
          // Send location data to Firebase
          String path1 = "/latitude"; // The path in the database where you want to store the data
-         String value1 = String(latitude) ; // The value you want to store as a string
+         String value1 = String(latitude,6) ; // The value you want to store as a string
          String path2 = "/longitude"; // The path in the database where you want to store the data
-         String value2 = String(longitude) ; // The value you want to store as a string
+         String value2 = String(longitude,6) ; // The value you want to store as a string
          
 
          if (Firebase.setString(firebaseData,path1,value1)) { 
